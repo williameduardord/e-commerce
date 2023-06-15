@@ -12,7 +12,8 @@
         box-sizing: border-box;
         font-family: 'Rubick', sant-serif;
     }
-    h1,h2,h3,h4,h5,h6,p,a,imput,textarea{
+    h1,h2,h3,h4,h5,h6,p,a,imput,textarea,ul{
+        padding: 0;
         margin: 0;
     }
 
