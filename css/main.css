@@ -66,11 +66,12 @@
         font-weight: 600;
         padding: 1rem;
         font-size: 1rem;
+        width: 100%;
     }
     .boton-menu.active{
         background-color: var(--clr-grey-ligth);
         color: var(--clr-main);
-        width: 100%;
+        
         border-top-left-radius: 1rem;
         border-bottom-left-radius: 1rem;
         position: relative;
@@ -143,7 +144,7 @@
         gap: 1rem;
     }
     .producto-imagen{
-        max-width: 90%;
+        max-width:100%;
         border-radius: 1rem;
         height: 80%;
         
@@ -152,7 +153,7 @@
         background-color: var(--clr-main);
         color: var(--clr-white);
         padding: .5rem ;
-        max-width: 90%;
+        max-width: 100%;
         border-radius: 1rem;
         margin-top: -2rem;
         position: relative;
