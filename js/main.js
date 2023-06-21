@@ -151,8 +151,17 @@ function actualizarBotonesAgregar() {
         boton.addEventListener("click", agregarAlCarrito);//para agregar el evento de click y asignarle la funcion agregarAl Carrito
     });
 }
+let productosEnCarrito;
 
-const productosEnCarrito = [];
+
+const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-carrito"));
+if (productosEnCarritoLS){
+    productosEnCarrito=productosEnCarritoLS;
+    actualizarNumerito();
+}else{
+    productosEnCarrito = [];
+}
+
 
 function agregarAlCarrito(e) {
     const idBoton = e.currentTarget.id;//le asigna la id del boton a la constante idBoton en el evento de click
@@ -166,7 +175,8 @@ function agregarAlCarrito(e) {
         productosEnCarrito.push(productoAgregado);//si no existe el prducto en productosEnCarrito, lo agrega
     }
     actualizarNumerito();
-    console.log(productosEnCarrito);
+    
+    localStorage.setItem("productos-en-carrito",JSON.stringify(productosEnCarrito));
 }
 
 function actualizarNumerito() {
